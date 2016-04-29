@@ -39,7 +39,7 @@
       Honestly I think the main problem with this system is how many things need to be filled out
     </h2>
     <div class="container">
-    <form action="eagleSignOutSQL.php" method="post">
+    <form action="signOutSQL.php" method="post">
       <p>
         <label>Name:</label>
         <input autocomplete="off" type="text" name="id">

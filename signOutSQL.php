@@ -3,12 +3,12 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "eagleSheet";
-$id = $_POST["id"]; #$id = 1000485122
+$id = $_POST["id"]; 
 $item = $_POST["item"];
 $in_or_out = $_POST["in_or_out"];
 $purpose = $_POST["purpose"];
 $returned = $_POST["returned"];
-include "eagleDictionary.php";
+include "dictionary.php";
 
 
 foreach ($idDictionary as $key => $val) {
@@ -27,7 +27,7 @@ $sql = "INSERT INTO signInOut (NAME, ITEM, PURPOSE, RETURN_DATE, IN_OR_OUT)
 VALUES ('$id', '$item', '$purpose', '$returned', '$in_or_out')";
 
 if ($conn->query($sql) === TRUE) {
-  header("Location: http://preview.1lqgijkopnrn3ik91w5o5k1k0bgwrk9u7wd8qjk6dbcsor.box.codeanywhere.com/eagleSignOut.php");
+  header("Location: https://raw.githubusercontent.com/freedg/pelicanCase/master/signOut.php");
   die();
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
